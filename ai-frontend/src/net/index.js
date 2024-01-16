@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { ElMessage } from 'element-plus'
 
-
+const global = window; // fix global is undefined in socketjs-client
 const authItemName = "access_token"
 const defaultFailure = (message,code,url) => {
     console.warn(`请求地址:${url},状态码:${code},错误信息:${message}`)
@@ -21,12 +21,27 @@ function takeAccessToken(){
         ElMessage.warning('登录已过期，请重新登录')
         return null;
     }
+    
     return authObj.token
     
 }
-function storeAccessToken(remember, token, expire){
+function accessUserId(){
+    const str = localStorage.getItem(authItemName) || sessionStorage.getItem(authItemName)
+    //变量 str 是否为 falsy。在 JavaScript 中，falsy 值包括 null、undefined、空字符串 ''、数字 0、NaN 和 false。
+    if(!str) return null;
+    const authObj = JSON.parse(str)
+    if(authObj.expire <= new Date()){
+        deleAccessToken()
+        ElMessage.warning('登录已过期，请重新登录')
+        return null;
+    }
+    
+    return authObj.userid
+}
+function storeAccessToken(remember, token,userid, expire){
     const authObj = {
         token: token,
+        userid:userid,
         expire: expire
     }
     const str = JSON.stringify(authObj)
@@ -84,7 +99,7 @@ function login(username,password,remember,success,failure=defaultFailure){
     },{
             'Content-Type': 'application/x-www-form-urlencoded'
     },(data)=>{
-            storeAccessToken(remember,data.token,data.expire)
+            storeAccessToken(remember,data.token,data.id,data.expire)
             ElMessage.success(`登录成功，欢迎${data.username}`)
             success(data)
     },failure
@@ -100,7 +115,9 @@ function logout(success,failure=defaultFailure){
 
 }
 
+
+
 function unauthorized(){
     return !takeAccessToken()
 }
-export {login,logout,get,post,unauthorized}
+export {login,logout,get,post,unauthorized,accessHeader,accessUserId}

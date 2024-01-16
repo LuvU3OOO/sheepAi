@@ -19,6 +19,7 @@
   </template>
   
   <script setup>
+  const global = window; // fix global is undefined in socketjs-client
   // No script logic for this example
   </script>
   
@@ -40,7 +41,7 @@
   .right-card{
     width: 400px;
     z-index: 1;
-    background-color: white;
+    background-color: var(--el-bg-color);
   }
   
   
