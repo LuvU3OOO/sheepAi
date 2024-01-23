@@ -1,8 +1,11 @@
 package com.example.service.impl;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.example.entity.chatdto.ChatSession;
+import com.example.mapper.ChatMessageMapper;
 import com.example.mapper.ChatSessionMapper;
 import com.example.service.ChatService;
 import com.example.service.ChatSessionService;
@@ -17,6 +20,8 @@ import java.util.List;
 @Service
 public class ChatSessionImpl extends ServiceImpl<ChatSessionMapper, ChatSession> implements ChatSessionService {
 
+    @Resource
+    ChatMessageMapper messageMapper;
 
     @Override
     public boolean updateToken(int tokens, String sessionId) {
@@ -33,7 +38,8 @@ public class ChatSessionImpl extends ServiceImpl<ChatSessionMapper, ChatSession>
 
     @Override
     public boolean deleteSession(String sessionId) {
-        return this.removeById(sessionId);
+
+        return this.removeById(sessionId)&&messageMapper.deleteSession(sessionId);
     }
 
     @Override

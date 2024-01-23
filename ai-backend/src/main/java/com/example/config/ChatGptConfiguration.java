@@ -10,7 +10,7 @@ import java.time.Duration;
 public class ChatGptConfiguration {
 
 
-    private String token = "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";
+    private String token = "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";
 
     private long timeout = 60;
 

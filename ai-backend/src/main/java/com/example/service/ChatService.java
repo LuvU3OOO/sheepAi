@@ -2,6 +2,7 @@ package com.example.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.example.entity.chatdto.Message;
+import com.example.entity.chatvo.response.ResponseMessage;
 import com.theokanning.openai.completion.chat.ChatCompletionRequest;
 import com.theokanning.openai.completion.chat.ChatMessage;
 
@@ -17,4 +18,7 @@ public interface ChatService extends IService<Message> {
     public void sendMessage(ChatMessage chatMessage,
                             String userid,
                             String sessionId);
+    public List<ResponseMessage> getMessages(String sessionId);
+
+
 }

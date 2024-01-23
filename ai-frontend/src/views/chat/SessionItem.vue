@@ -1,6 +1,6 @@
 
 <script lang="ts" setup>
-  import {CircleClose} from "@element-plus/icons-vue";
+  import { Delete } from "@element-plus/icons-vue";
   import { time } from "console";
   import { ChatSession } from  '../../entity/entity';
   import { delSession } from "../../net/chat";
@@ -42,7 +42,7 @@
             @confirm="handleDeleteSession"
         >
           <template #reference>
-            <CircleClose/>
+            <Delete/>
           </template>
         </el-popconfirm>
       </el-icon>

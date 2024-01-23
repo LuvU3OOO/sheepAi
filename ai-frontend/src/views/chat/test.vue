@@ -58,7 +58,7 @@ const sendMessage = () => {
       role: "user",
       userid:userid
     },()=>{
-      console.log(111)},()=>{})
+      console.log("连接成功")},()=>{})
    
   } else {
     console.error('WebSocket 连接尚未打开');

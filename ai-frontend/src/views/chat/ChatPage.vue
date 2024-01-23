@@ -12,7 +12,7 @@
                         <template #header>
                             <div class="card-header">
                                 <span>Card name</span>
-                                <el-button class="button" text>Operation button</el-button>
+                                <el-button class="button" @click="handleCreateSession" text>新对话</el-button>
                             </div>
                         </template>
                         <div>
@@ -33,7 +33,12 @@
                 </div>
             </div>
             <!-- 右侧的消息记录 -->
-            <div class="message-panel"></div>
+            <div class="message-panel">
+                <MessageRow 
+                v-for="(message,index) in messageList"
+                :message="message"
+                ></MessageRow>
+            </div>
         </div>
     </div>
 </template>
@@ -43,9 +48,11 @@ import { onMounted, ref } from 'vue';
 import { get, post, accessUserId } from '../../net/index.js'
 import { getSessions } from '../../net/chat'
 import SessionItem from './SessionItem.vue'
-import { ChatSession } from '../../entity/entity';
-import { da } from 'element-plus/es/locale';
+import MessageRow from './MessageRow.vue';
+import { ChatMessage, ChatSession } from '../../entity/entity';
+import { getMessages } from '../../net/chat';
 const sessionList = ref([] as ChatSession[]);
+const messageList = ref([] as ChatMessage[])
 const isEdit = ref(false);
 const activeSession = ref(({ messages: [] } as unknown) as ChatSession);
 const userid = accessUserId()
@@ -62,6 +69,9 @@ onMounted(() => {
 });
 // 切换会话
 const handleSessionSwitch = (session: ChatSession) => {
+    getMessages(session.sessionId,(data)=>{
+        messageList.value = data
+    })
     activeSession.value = session;
 };
 // 从会话列表中删除会话
@@ -73,8 +83,16 @@ const handleDeleteSession = (session: ChatSession) => {
 };
 // 新增会话
 const handleCreateSession = async () => {
-  
-    sessionList.value.push();
+    // 创建一个带初值的ChatSession对象
+    const initialChatSession: ChatSession = {
+        createdAt: new Date(),
+        sessionId: undefined,
+        tokens: 0,
+        topic: "新的对话",
+        userid: userid,
+    };
+
+    sessionList.value.push(initialChatSession);
 };
 
 

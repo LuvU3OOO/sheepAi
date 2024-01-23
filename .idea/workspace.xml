@@ -4,7 +4,59 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14fa18a5-661a-4c69-b11e-8c25a90a1c88" name="Changes" comment="基本功能完成" />
+    <list default="true" id="14fa18a5-661a-4c69-b11e-8c25a90a1c88" name="Changes" comment="基本功能完成">
+      <change afterPath="$PROJECT_DIR$/ai-backend/src/main/java/com/example/entity/chatvo/response/ResponseMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-backend/src/main/java/com/example/config/ChatGptConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/ai-backend/src/main/java/com/example/config/ChatGptConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-backend/src/main/java/com/example/controller/ChatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ai-backend/src/main/java/com/example/controller/ChatController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-backend/src/main/java/com/example/controller/WebSocketChatMessageController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-backend/src/main/java/com/example/mapper/ChatMessageMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/ai-backend/src/main/java/com/example/mapper/ChatMessageMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-backend/src/main/java/com/example/service/ChatService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ai-backend/src/main/java/com/example/service/ChatService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-backend/src/main/java/com/example/service/impl/ChatServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ai-backend/src/main/java/com/example/service/impl/ChatServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-backend/src/main/java/com/example/service/impl/ChatSessionImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ai-backend/src/main/java/com/example/service/impl/ChatSessionImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-backend/target/classes/com/example/config/ChatGptConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/ai-backend/target/classes/com/example/config/ChatGptConfiguration.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-backend/target/classes/com/example/controller/ChatController.class" beforeDir="false" afterPath="$PROJECT_DIR$/ai-backend/target/classes/com/example/controller/ChatController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-backend/target/classes/com/example/controller/WebSocketChatMessageController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-backend/target/classes/com/example/mapper/ChatMessageMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/ai-backend/target/classes/com/example/mapper/ChatMessageMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-backend/target/classes/com/example/service/ChatService.class" beforeDir="false" afterPath="$PROJECT_DIR$/ai-backend/target/classes/com/example/service/ChatService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-backend/target/classes/com/example/service/impl/ChatServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/ai-backend/target/classes/com/example/service/impl/ChatServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-backend/target/classes/com/example/service/impl/ChatSessionImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/ai-backend/target/classes/com/example/service/impl/ChatSessionImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-frontend/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/ai-frontend/node_modules/.package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/@element-plus_icons-vue.js" beforeDir="false" afterPath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/@element-plus_icons-vue.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/@vueuse_core.js" beforeDir="false" afterPath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/@vueuse_core.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/_metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/_metadata.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/axios.js" beforeDir="false" afterPath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/axios.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/chunk-GZ6Y3GHI.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/chunk-GZ6Y3GHI.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/chunk-HM4MQYWN.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/chunk-HM4MQYWN.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/element-plus.js" beforeDir="false" afterPath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/element-plus.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/element-plus_es.js" beforeDir="false" afterPath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/element-plus_es.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/element-plus_es_components_checkbox_style_css.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/element-plus_es_components_checkbox_style_css.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/element-plus_es_components_col_style_css.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/element-plus_es_components_col_style_css.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/element-plus_es_components_divider_style_css.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/element-plus_es_components_divider_style_css.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/element-plus_es_components_image_style_css.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/element-plus_es_components_image_style_css.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/element-plus_es_components_link_style_css.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/element-plus_es_components_link_style_css.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/element-plus_es_components_row_style_css.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/element-plus_es_components_row_style_css.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/sockjs-client_dist_sockjs__min__js.js" beforeDir="false" afterPath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/sockjs-client_dist_sockjs__min__js.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/stompjs.js" beforeDir="false" afterPath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/stompjs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/vue-router.js" beforeDir="false" afterPath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/vue-router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/vue.js" beforeDir="false" afterPath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/vue.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/ai-frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/ai-frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-frontend/src/entity/entity.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ai-frontend/src/entity/entity.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-frontend/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/ai-frontend/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-frontend/src/net/chat.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ai-frontend/src/net/chat.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-frontend/src/views/chat/ChatPage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/ai-frontend/src/views/chat/ChatPage.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-frontend/src/views/chat/SessionItem.vue" beforeDir="false" afterPath="$PROJECT_DIR$/ai-frontend/src/views/chat/SessionItem.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-frontend/src/views/chat/test.vue" beforeDir="false" afterPath="$PROJECT_DIR$/ai-frontend/src/views/chat/test.vue" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -49,33 +101,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "jdk.selected.JAVA_MODULE": "17",
-    "last_opened_file_path": "D:/APP/CODE/Hugai-chatgpt-master",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "spring.configuration.checksum": "5839065c7b0a22619d0c48fc92af03bc",
-    "ts.external.directory.path": "C:\\D\\IDEA\\IntelliJ IDEA 2023.2.1\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/APP/CODE/Hugai-chatgpt-master&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;5839065c7b0a22619d0c48fc92af03bc&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\D\\IDEA\\IntelliJ IDEA 2023.2.1\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -189,7 +241,8 @@
       <workItem from="1705542433557" duration="3015000" />
       <workItem from="1705642805582" duration="7848000" />
       <workItem from="1705882960542" duration="8570000" />
-      <workItem from="1705972764175" duration="1161000" />
+      <workItem from="1705972764175" duration="17229000" />
+      <workItem from="1706009766919" duration="1000" />
     </task>
     <task id="LOCAL-00001" summary="初始项目创建">
       <option name="closed" value="true" />

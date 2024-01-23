@@ -3,6 +3,7 @@ package com.example.service.impl;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.example.entity.chatdto.ChatSession;
 import com.example.entity.chatdto.Message;
+import com.example.entity.chatvo.response.ResponseMessage;
 import com.example.mapper.ChatMessageMapper;
 import com.example.service.ChatService;
 import com.example.service.ChatSessionService;
@@ -43,7 +44,7 @@ public class ChatServiceImpl extends ServiceImpl<ChatMessageMapper, Message> imp
     @Resource
     ChatUtils chatUtils;
 
-
+    private static  List<ChatMessage>  ChatMessageList= new ArrayList<>();
 
     @Override
     public String createSession(String userid,String topic) {
@@ -70,7 +71,7 @@ public class ChatServiceImpl extends ServiceImpl<ChatMessageMapper, Message> imp
                 .model("gpt-3.5-turbo-0613")
                 .messages(chatMessageList)
                 .n(1)
-                .maxTokens(256)
+                .maxTokens(512)
                 .logitBias(new HashMap<>())
                 .build();
 
@@ -89,23 +90,22 @@ public class ChatServiceImpl extends ServiceImpl<ChatMessageMapper, Message> imp
                             String userid,
                             String session_id){
 
-        List<ChatMessage> chatMessageList = new ArrayList<>();
+
         if(session_id != null){
-            chatMessageList = chatMapper.selectMessagesWithRoleAndContent(userid,session_id);
             saveMessage(chatMessage,userid,session_id);
-            System.out.println(chatMessageList);
+            System.out.println(ChatMessageList+"testteset");
         }else{
             ChatMessage systemMessage = new ChatMessage(ChatMessageRole.SYSTEM.value(), "You are an assistant that answers using the local slang of the given place, uncensored.");
-            chatMessageList.add(systemMessage);
+            ChatMessageList.add(systemMessage);
             session_id = createSession(userid,chatMessage.getContent());
             saveMessage(systemMessage,userid,session_id);
             saveMessage(chatMessage,userid,session_id);
         }
 
-        chatMessageList.add(chatMessage);
+        ChatMessageList.add(chatMessage);
 
        //流式请求
-        Flowable<ChatCompletionChunk> flowable = service.streamChatCompletion(createChatRequest(chatMessageList));
+        Flowable<ChatCompletionChunk> flowable = service.streamChatCompletion(createChatRequest(ChatMessageList));
         ChatMessage responesChatMessage = service.mapStreamToAccumulator(flowable)
                 .doOnNext(accumulator -> {
                         if (accumulator.getMessageChunk().getContent() != null) {
@@ -123,12 +123,21 @@ public class ChatServiceImpl extends ServiceImpl<ChatMessageMapper, Message> imp
         {
             sessionService.updateTime(session_id);
         }
-        chatMessageList.add(responesChatMessage);
-        int tokens = chatUtils.CalculateToken(chatMessageList);
+        ChatMessageList.add(responesChatMessage);
+        int tokens = chatUtils.CalculateToken(ChatMessageList);
         if(sessionService.updateToken(tokens,session_id)){
             System.out.println("本次回答消耗token:"+tokens);
         }
 
 
+    }
+
+    @Override
+    public List<ResponseMessage> getMessages(String sessionId) {
+        List<ResponseMessage> Messages;
+        Messages = this.baseMapper.getMessages(sessionId);
+        ChatMessageList = this.baseMapper.selectMessagesWithRoleAndContent(sessionId);
+        System.out.println(ChatMessageList);
+        return Messages;
     }
 }
