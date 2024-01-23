@@ -22,6 +22,7 @@
     "@types/sockjs-client": "^1.5.4",
     "@types/stompjs": "^2.3.9",
     "@vitejs/plugin-vue": "^4.4.0",
+    "sass": "^1.69.7",
     "unplugin-auto-import": "^0.17.1",
     "unplugin-vue-components": "^0.25.2",
     "vite": "^4.4.11"

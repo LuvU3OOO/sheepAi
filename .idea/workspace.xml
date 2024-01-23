@@ -4,34 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14fa18a5-661a-4c69-b11e-8c25a90a1c88" name="Changes" comment="基础框架完成">
+    <list default="true" id="14fa18a5-661a-4c69-b11e-8c25a90a1c88" name="Changes" comment="基本功能完成">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ai-backend" beforeDir="false" afterPath="$PROJECT_DIR$/ai-backend" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ai-backend/src/main/java/com/example/mapper/ChatSessionMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/ai-backend/src/main/java/com/example/mapper/ChatSessionMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ai-backend/src/main/java/com/example/service/ChatSessionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ai-backend/src/main/java/com/example/service/ChatSessionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ai-backend/src/main/java/com/example/service/impl/ChatSessionImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ai-backend/src/main/java/com/example/service/impl/ChatSessionImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ai-frontend/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/ai-frontend/node_modules/.package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/@element-plus_icons-vue.js" beforeDir="false" afterPath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/@element-plus_icons-vue.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/@vueuse_core.js" beforeDir="false" afterPath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/@vueuse_core.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/_metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/_metadata.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/axios.js" beforeDir="false" afterPath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/axios.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/chunk-5VEQLIAP.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/chunk-5VEQLIAP.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/chunk-5WWUZCGV.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/chunk-5WWUZCGV.js.map" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/element-plus.js" beforeDir="false" afterPath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/element-plus.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/element-plus_es.js" beforeDir="false" afterPath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/element-plus_es.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/element-plus_es_components_button_style_css.js" beforeDir="false" afterPath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/element-plus_es_components_button_style_css.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/element-plus_es_components_button_style_css.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/element-plus_es_components_button_style_css.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/vue-router.js" beforeDir="false" afterPath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/vue-router.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/vue.js" beforeDir="false" afterPath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/vue.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ai-frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/ai-frontend/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ai-frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/ai-frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ai-frontend/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/ai-frontend/src/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ai-frontend/src/net/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/ai-frontend/src/net/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ai-frontend/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/ai-frontend/src/router/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ai-frontend/src/views/HomeView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/ai-frontend/src/views/HomeView.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ai-frontend/src/views/WelcomeView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/ai-frontend/src/views/WelcomeView.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ai-frontend/src/views/welcome/ChatPage.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ai-frontend/src/views/welcome/LoginPage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/ai-frontend/src/views/welcome/LoginPage.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -212,7 +202,11 @@
       <workItem from="1705204393777" duration="3655000" />
       <workItem from="1705280371490" duration="10859000" />
       <workItem from="1705294500907" duration="18802000" />
-      <workItem from="1705369860092" duration="6615000" />
+      <workItem from="1705369860092" duration="20482000" />
+      <workItem from="1705453360192" duration="8612000" />
+      <workItem from="1705542433557" duration="3015000" />
+      <workItem from="1705642805582" duration="7848000" />
+      <workItem from="1705882960542" duration="8570000" />
     </task>
     <task id="LOCAL-00001" summary="初始项目创建">
       <option name="closed" value="true" />
@@ -246,7 +240,15 @@
       <option name="project" value="LOCAL" />
       <updated>1703150772427</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="基本功能完成">
+      <option name="closed" value="true" />
+      <created>1705384138010</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1705384138010</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -277,7 +279,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="初始项目创建" />
     <MESSAGE value="基础框架完成" />
-    <option name="LAST_COMMIT_MESSAGE" value="基础框架完成" />
+    <MESSAGE value="基本功能完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="基本功能完成" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

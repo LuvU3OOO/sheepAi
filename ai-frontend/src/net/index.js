@@ -1,7 +1,6 @@
 import axios from 'axios'
 import { ElMessage } from 'element-plus'
 
-const global = window; // fix global is undefined in socketjs-client
 const authItemName = "access_token"
 const defaultFailure = (message,code,url) => {
     console.warn(`请求地址:${url},状态码:${code},错误信息:${message}`)
