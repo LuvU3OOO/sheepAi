@@ -10,5 +10,6 @@ public class RequestMessage {
     private String content;
     private String session_Id= null;
     private String userid;
+    private boolean IsContinuous;
 
 }

@@ -1,6 +1,6 @@
 import axios from 'axios'
 import { ElMessage } from 'element-plus'
-
+import router from '../router'
 const authItemName = "access_token"
 const defaultFailure = (message,code,url) => {
     console.warn(`请求地址:${url},状态码:${code},错误信息:${message}`)
@@ -18,9 +18,10 @@ function takeAccessToken(){
     if(authObj.expire <= new Date()){
         deleAccessToken()
         ElMessage.warning('登录已过期，请重新登录')
+        // router.push('/')
         return null;
     }
-    
+
     return authObj.token
     
 }
@@ -32,16 +33,31 @@ function accessUserId(){
     if(authObj.expire <= new Date()){
         deleAccessToken()
         ElMessage.warning('登录已过期，请重新登录')
+        // router.push('/')
+        return null;
+    }
+    return authObj.userid
+}
+function accessUserName(){
+    const str = localStorage.getItem(authItemName) || sessionStorage.getItem(authItemName)
+    //变量 str 是否为 falsy。在 JavaScript 中，falsy 值包括 null、undefined、空字符串 ''、数字 0、NaN 和 false。
+    if(!str) return null;
+    const authObj = JSON.parse(str)
+    if(authObj.expire <= new Date()){
+        deleAccessToken()
+        ElMessage.warning('登录已过期，请重新登录')
+        // router.push('/')
         return null;
     }
     
-    return authObj.userid
+    return authObj.username
 }
-function storeAccessToken(remember, token,userid, expire){
+function storeAccessToken(remember, token,userid, expire,username){
     const authObj = {
         token: token,
         userid:userid,
-        expire: expire
+        expire: expire,
+        username:username
     }
     const str = JSON.stringify(authObj)
     if(remember)
@@ -52,6 +68,9 @@ function storeAccessToken(remember, token,userid, expire){
 function deleAccessToken(){
     localStorage.removeItem(authItemName)
     sessionStorage.removeItem(authItemName)
+    if(localStorage.getItem("session"))
+    {localStorage.removeItem("session")}
+        
 
 }
 function accessHeader(){
@@ -81,7 +100,6 @@ function internalGet(url,header,success,failure,error=defaultError){
         }else{
             failure(data.message,data.code,url)
         }
-
     }).catch(err => error(err))
 }
 
@@ -98,7 +116,7 @@ function login(username,password,remember,success,failure=defaultFailure){
     },{
             'Content-Type': 'application/x-www-form-urlencoded'
     },(data)=>{
-            storeAccessToken(remember,data.token,data.id,data.expire)
+            storeAccessToken(remember,data.token,data.id,data.expire,data.username)
             ElMessage.success(`登录成功，欢迎${data.username}`)
             success(data)
     },failure
@@ -115,8 +133,10 @@ function logout(success,failure=defaultFailure){
 }
 
 
-
 function unauthorized(){
-    return !takeAccessToken()
+    const token = takeAccessToken()
+    if(token === null)
+         return true;
+    else return false
 }
-export {login,logout,get,post,unauthorized,accessHeader,accessUserId}
+export {login,logout,get,post,unauthorized,accessHeader,accessUserId,accessUserName}

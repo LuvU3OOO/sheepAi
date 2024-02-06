@@ -7,7 +7,7 @@
   // avatar：用户头像，如果角色是 Assistant则使用 logo。
   const props = defineProps({
     message: {type: Object as PropType<ChatMessage>, required: true},
-    avatar: {type: String, default: "https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png"},
+    avatar: {type: String, default: "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fsafe-img.xhscdn.com%2Fbw1%2F03360f8c-9b2f-4534-b2f3-320a405b9ed8%3FimageView2%2F2%2Fw%2F1080%2Fformat%2Fjpg&refer=http%3A%2F%2Fsafe-img.xhscdn.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1709280792&t=5d22ba60745c41f9cd9f2464a3cf8d40"},
   });
   const logo = "https://sf1-cdn-tos.bdxiguastatic.com/img/mosaic-legacy/2e2f10008b90ada01b8bf~300x300.image"
 </script>
@@ -25,10 +25,10 @@
             class="avatar"
             shape="square"
         />
-        <el-avatar v-else :src="logo" class="avatar" shape="square"/>
+        <el-avatar v-else-if="message.role==='assistant'" :src="logo" class="avatar" shape="square"/>
       </div>
       <!-- 发送的消息或者回复的消息 -->
-      <div class="message">
+      <div class="message" v-if="message.role==='user'|| message.role==='assistant'">
         <!-- 预览模式，用来展示markdown格式的消息 -->
         <MdPreview
             :id="'preview-only'"
@@ -52,6 +52,7 @@
     display: flex;
 
     &.right {
+
       // 消息显示在右侧
       justify-content: flex-end;
 
@@ -60,10 +61,13 @@
         .avatar-wrapper {
           display: flex;
           justify-content: flex-end;
+          margin-right: 15px;
+
         }
 
         // 用户回复的消息和ChatGPT回复的消息背景颜色做区分
         .message {
+          margin-right: 45px;
           background-color: rgb(231, 248, 255);
         }
       }
@@ -75,6 +79,7 @@
         .avatar {
           box-shadow: 20px 20px 20px 3px rgba(0, 0, 0, 0.03);
           margin-bottom: 20px;
+          margin-left: 15px;
         }
       }
 
@@ -82,13 +87,14 @@
         font-size: 15px;
         padding: 1.5px;
         // 限制消息展示的最大宽度
-        max-width: 500px;
+        max-width: 700px;
         // 圆润一点
         border-radius: 7px;
         // 给消息框加一些描边，看起来更加实一些，要不然太扁了轻飘飘的。
         border: 1px solid rgba(black, 0.1);
         // 增加一些阴影看起来更加立体
         box-shadow: 20px 20px 20px 1px rgba(0, 0, 0, 0.01);
+        margin-left: 45px;
       }
     }
   }

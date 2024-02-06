@@ -1,16 +1,11 @@
 package com.example.service.impl;
 
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.example.entity.chatdto.ChatSession;
-import com.example.mapper.ChatMessageMapper;
+import com.example.mapper.ChatMapper;
 import com.example.mapper.ChatSessionMapper;
-import com.example.service.ChatService;
 import com.example.service.ChatSessionService;
-import com.example.utils.ChatUtils;
-import com.theokanning.openai.completion.chat.ChatMessage;
 import jakarta.annotation.Resource;
 import org.springframework.stereotype.Service;
 
@@ -21,13 +16,17 @@ import java.util.List;
 public class ChatSessionImpl extends ServiceImpl<ChatSessionMapper, ChatSession> implements ChatSessionService {
 
     @Resource
-    ChatMessageMapper messageMapper;
+    ChatMapper messageMapper;
 
     @Override
     public boolean updateToken(int tokens, String sessionId) {
         return this.update().eq("session_id",sessionId).set("tokens",tokens).update();
     }
 
+    @Override
+    public boolean updateTopic(String topic, String sessionId) {
+        return this.update().eq("session_id",sessionId).set("topic",topic).update();
+    }
     @Override
     public List<ChatSession> getSessions(String userid,long current, long size) {
 

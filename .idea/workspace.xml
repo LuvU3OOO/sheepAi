@@ -5,57 +5,52 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="14fa18a5-661a-4c69-b11e-8c25a90a1c88" name="Changes" comment="基本功能完成">
-      <change afterPath="$PROJECT_DIR$/ai-backend/src/main/java/com/example/entity/chatvo/response/ResponseMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ai-backend/src/main/java/com/example/entity/chatdto/ApiKey.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ai-backend/src/main/java/com/example/mapper/ApikeyMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ai-backend/src/main/java/com/example/service/ApiKeyService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ai-backend/src/main/java/com/example/service/impl/ApiKeyServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ai-backend/src/main/java/com/example/config/ChatGptConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/ai-backend/src/main/java/com/example/config/ChatGptConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-backend/src/main/java/com/example/config/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/ai-backend/src/main/java/com/example/config/SecurityConfiguration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ai-backend/src/main/java/com/example/controller/ChatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ai-backend/src/main/java/com/example/controller/ChatController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ai-backend/src/main/java/com/example/controller/WebSocketChatMessageController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ai-backend/src/main/java/com/example/mapper/ChatMessageMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/ai-backend/src/main/java/com/example/mapper/ChatMessageMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-backend/src/main/java/com/example/controller/exception/ErrorPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ai-backend/src/main/java/com/example/controller/exception/ErrorPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-backend/src/main/java/com/example/entity/chatvo/request/RequestMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/ai-backend/src/main/java/com/example/entity/chatvo/request/RequestMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-backend/src/main/java/com/example/mapper/ChatMessageMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/ai-backend/src/main/java/com/example/mapper/ChatMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ai-backend/src/main/java/com/example/service/ChatService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ai-backend/src/main/java/com/example/service/ChatService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-backend/src/main/java/com/example/service/ChatSessionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ai-backend/src/main/java/com/example/service/ChatSessionService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ai-backend/src/main/java/com/example/service/impl/ChatServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ai-backend/src/main/java/com/example/service/impl/ChatServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ai-backend/src/main/java/com/example/service/impl/ChatSessionImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ai-backend/src/main/java/com/example/service/impl/ChatSessionImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-backend/src/main/java/com/example/utils/ChatUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/ai-backend/src/main/java/com/example/utils/ChatUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-backend/src/main/java/com/example/utils/JwtUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/ai-backend/src/main/java/com/example/utils/JwtUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ai-backend/target/classes/com/example/config/ChatGptConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/ai-backend/target/classes/com/example/config/ChatGptConfiguration.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-backend/target/classes/com/example/config/SecurityConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/ai-backend/target/classes/com/example/config/SecurityConfiguration.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ai-backend/target/classes/com/example/controller/ChatController.class" beforeDir="false" afterPath="$PROJECT_DIR$/ai-backend/target/classes/com/example/controller/ChatController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ai-backend/target/classes/com/example/controller/WebSocketChatMessageController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ai-backend/target/classes/com/example/mapper/ChatMessageMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/ai-backend/target/classes/com/example/mapper/ChatMessageMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-backend/target/classes/com/example/controller/exception/ErrorPageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/ai-backend/target/classes/com/example/controller/exception/ErrorPageController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-backend/target/classes/com/example/entity/chatvo/request/RequestMessage.class" beforeDir="false" afterPath="$PROJECT_DIR$/ai-backend/target/classes/com/example/entity/chatvo/request/RequestMessage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-backend/target/classes/com/example/mapper/ChatMessageMapper.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ai-backend/target/classes/com/example/service/ChatService.class" beforeDir="false" afterPath="$PROJECT_DIR$/ai-backend/target/classes/com/example/service/ChatService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ai-backend/target/classes/com/example/service/impl/ChatServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/ai-backend/target/classes/com/example/service/impl/ChatServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ai-backend/target/classes/com/example/service/impl/ChatSessionImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/ai-backend/target/classes/com/example/service/impl/ChatSessionImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ai-frontend/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/ai-frontend/node_modules/.package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/@element-plus_icons-vue.js" beforeDir="false" afterPath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/@element-plus_icons-vue.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/@vueuse_core.js" beforeDir="false" afterPath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/@vueuse_core.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-backend/target/classes/com/example/utils/ChatUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/ai-backend/target/classes/com/example/utils/ChatUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-backend/target/classes/com/example/utils/JwtUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/ai-backend/target/classes/com/example/utils/JwtUtils.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/_metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/_metadata.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/axios.js" beforeDir="false" afterPath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/axios.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/chunk-GZ6Y3GHI.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/chunk-GZ6Y3GHI.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/chunk-HM4MQYWN.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/chunk-HM4MQYWN.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/chunk-RH63BGMW.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/chunk-RH63BGMW.js.map" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/element-plus.js" beforeDir="false" afterPath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/element-plus.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/element-plus_es.js" beforeDir="false" afterPath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/element-plus_es.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/element-plus_es_components_checkbox_style_css.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/element-plus_es_components_checkbox_style_css.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/element-plus_es_components_col_style_css.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/element-plus_es_components_col_style_css.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/element-plus_es_components_divider_style_css.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/element-plus_es_components_divider_style_css.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/element-plus_es_components_image_style_css.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/element-plus_es_components_image_style_css.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/element-plus_es_components_link_style_css.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/element-plus_es_components_link_style_css.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/element-plus_es_components_row_style_css.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/element-plus_es_components_row_style_css.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/sockjs-client_dist_sockjs__min__js.js" beforeDir="false" afterPath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/sockjs-client_dist_sockjs__min__js.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/stompjs.js" beforeDir="false" afterPath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/stompjs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/vue-router.js" beforeDir="false" afterPath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/vue-router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/vue.js" beforeDir="false" afterPath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/vue.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ai-frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/ai-frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ai-frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/ai-frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ai-frontend/src/entity/entity.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ai-frontend/src/entity/entity.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ai-frontend/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/ai-frontend/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/element-plus_es_components_input_style_css.js" beforeDir="false" afterPath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/element-plus_es_components_input_style_css.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/element-plus_es_components_input_style_css.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/element-plus_es_components_input_style_css.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/element-plus_es_components_popconfirm_style_css.js" beforeDir="false" afterPath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/element-plus_es_components_popconfirm_style_css.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/element-plus_es_components_popconfirm_style_css.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/ai-frontend/node_modules/.vite/deps/element-plus_es_components_popconfirm_style_css.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ai-frontend/src/net/chat.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ai-frontend/src/net/chat.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-frontend/src/net/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/ai-frontend/src/net/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-frontend/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/ai-frontend/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-frontend/src/views/HomeView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/ai-frontend/src/views/HomeView.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ai-frontend/src/views/chat/ChatPage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/ai-frontend/src/views/chat/ChatPage.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-frontend/src/views/chat/MessageRow.vue" beforeDir="false" afterPath="$PROJECT_DIR$/ai-frontend/src/views/chat/MessageRow.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ai-frontend/src/views/chat/SessionItem.vue" beforeDir="false" afterPath="$PROJECT_DIR$/ai-frontend/src/views/chat/SessionItem.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ai-frontend/src/views/chat/test.vue" beforeDir="false" afterPath="$PROJECT_DIR$/ai-frontend/src/views/chat/test.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-frontend/src/views/welcome/resetReadme.md" beforeDir="false" afterPath="$PROJECT_DIR$/ai-frontend/src/views/welcome/resetReadme.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -243,6 +238,18 @@
       <workItem from="1705882960542" duration="8570000" />
       <workItem from="1705972764175" duration="17229000" />
       <workItem from="1706009766919" duration="1000" />
+      <workItem from="1706060403158" duration="4822000" />
+      <workItem from="1706142577907" duration="5107000" />
+      <workItem from="1706229029462" duration="7575000" />
+      <workItem from="1706488482771" duration="10333000" />
+      <workItem from="1706577561578" duration="8025000" />
+      <workItem from="1706670828703" duration="4313000" />
+      <workItem from="1706753357259" duration="1549000" />
+      <workItem from="1706855063987" duration="1035000" />
+      <workItem from="1707016599256" duration="15548000" />
+      <workItem from="1707111683574" duration="13103000" />
+      <workItem from="1707180880139" duration="6503000" />
+      <workItem from="1707188664797" duration="17049000" />
     </task>
     <task id="LOCAL-00001" summary="初始项目创建">
       <option name="closed" value="true" />

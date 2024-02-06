@@ -4,6 +4,7 @@
   import { time } from "console";
   import { ChatSession } from  '../../entity/entity';
   import { delSession } from "../../net/chat";
+  import dayjs from "dayjs";
   // active：用来标记当前会话是否处于选中状态
   // session：用于展示的会话信息
  
@@ -20,6 +21,9 @@
       emit("delete", prop.session);
     })
   };
+  function formatDate(date){
+    return dayjs(date).format("YYYY-MM-DD HH:mm:ss")
+}
 </script>
 <template>
   <!-- 如果处于激活状态则增加 active class -->
@@ -30,7 +34,7 @@
     <div class="count-time">
       <div class="count">
       </div>
-      <div class="time">{{ session.createdAt}}</div>
+      <div class="time">{{ formatDate(session.createdAt)}}</div>
     </div>
     <!-- 当鼠标放在会话上时会弹出遮罩 -->
     <div class="mask"></div>
@@ -52,13 +56,17 @@
 <style lang="scss" scoped>
   .session-item {
     margin-top: 5px;
+
     /* 加一下padding不要让会话内容靠边界太近 */
     padding: 12px;
     background-color: white;
     /* 给边界一些圆角看起来圆润一些 */
     border-radius: 10px;
     /* 固定宽度 */
-    width: 250px;
+    width: 12vw;
+
+    margin-left: 20px;
+    margin-right: 20px;
     /* 父相子绝，父元素是相对布局的情况下，子元素的绝对布局是相当于父元素绝对布局。 */
     position: relative;
     /* 当鼠标放在会话上时改变鼠标的样式，暗示用户可以点击。目前还没做拖动的效果，以后会做。 */
@@ -71,7 +79,8 @@
       font-size: 14px;
       /* 凸显名称，加粗 */
       font-weight: 700;
-      width: 200px;
+      width: auto;
+      
       /* 加粗后颜色淡一些 */
       color: rgba(black, 0.8);
     }

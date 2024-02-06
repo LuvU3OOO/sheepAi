@@ -34,6 +34,7 @@ public class ErrorPageController extends AbstractErrorController {
         Map<String, Object> errorAttributes = this.getErrorAttributes(request, this.getAttributeOptions());
         String message = this.convertErrorMessage(status)
                 .orElse(errorAttributes.get("message").toString());
+        System.out.println(message);
         return RestBean.failure(status.value(), message);
     }
 
@@ -45,6 +46,7 @@ public class ErrorPageController extends AbstractErrorController {
     private Optional<String> convertErrorMessage(HttpStatus status){
         String value = switch (status.value()) {
             case 400 -> "请求参数有误";
+            case 401 -> "网络问题";
             case 404 -> "请求的接口不存在";
             case 405 -> "请求方法错误";
             case 429 -> "内部错误，请联系管理员";

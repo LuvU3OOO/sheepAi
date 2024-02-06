@@ -7,22 +7,16 @@ import router from "../router";
 const defaultError = (err) => {
     console.warn(err)
     ElMessage.error("获取用户对话记录错误,请重新登录")
-    // router.push('/index')
+    router.push('/')
     
 }
 function getSessions(userid,success,failure=defaultError)
 {
     let url = `/api/chat/getSession?userid=${userid}`
     get(url,(data)=>{
-            // const mappedData:ChatSession[] = data.map(item => ({
-            //     createdAt: new Date(item.createdAt),
-            //     sessionId: item.sessionId,
-            //     tokens: item.tokens,
-            //     topic: item.topic,
-            //     userid: item.userid,
-            // }));
+         
         success(data)
-        // console.log(data)
+
     },failure)
 }
 
@@ -36,21 +30,38 @@ function delSession(sessionId,success)
     })
 }
 
-
-function getMessages(sessionId,success,failure=defaultError)
+function createSession(userid,success)
 {
-    let url = `/api/chat/getMessages?sessionId=${sessionId}`
+    let url = `/api/chat/createSession?userid=${userid}`
     get(url,(data)=>{
-            // const mappedData:ChatSession[] = data.map(item => ({
-            //     createdAt: new Date(item.createdAt),
-            //     sessionId: item.sessionId,
-            //     tokens: item.tokens,
-            //     topic: item.topic,
-            //     userid: item.userid,
-            // }));
+        success(data)
+        // ElMessage.success('创建会话成功')
+      
+    })
+}
+
+
+function getMessages(userid,sessionId,success,failure=defaultError)
+{
+    
+    let url = `/api/chat/getMessages?sessionId=${sessionId}&userid=${userid}`
+    get(url,(data)=>{
+        if(sessionId)
+            {localStorage.setItem("session", sessionId)}
         success(data)
         // console.log(data)
     },failure)
 }
 
-export {getSessions,getMessages,delSession}
+function stopResponsing(userid,failure=defaultError)
+{   
+    
+    let url = `/api/chat/cancel?userid=${userid}`
+    get(url,()=>{
+      
+        console.log("停止响应")
+    },failure)
+}
+
+
+export {getSessions,getMessages,delSession,stopResponsing,createSession}

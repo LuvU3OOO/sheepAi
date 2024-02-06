@@ -15,4 +15,5 @@ public interface ChatSessionService extends IService<ChatSession> {
     public  boolean deleteSession(String sessionId);
 
     public boolean updateTime(String sessionId);
+    public boolean updateTopic(String topic, String sessionId);
 }

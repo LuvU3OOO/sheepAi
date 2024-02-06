@@ -44,7 +44,7 @@ public class SecurityConfiguration {
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         return http
                 .authorizeHttpRequests(conf -> conf
-                        .requestMatchers("/api/auth/**","/swagger-ui/**","/v3/api-docs/**","/api/chat/**","/ws/**","/ws2/**").permitAll()
+                        .requestMatchers("/api/auth/**","/swagger-ui/**","/v3/api-docs/**","/ws/**","/ws2/**").permitAll()
                         .anyRequest().authenticated()
                 )
                 .formLogin(conf -> conf
@@ -91,6 +91,7 @@ public class SecurityConfiguration {
                 v.setExpire(jwtUtils.expireTime());
                 v.setToken(token);
                 v.setId(account.getId());
+                v.setRole(account.getRole());
             });
 //            vo.setExpire(jwtUtils.expireTime());
 //            vo.setRole(account.getRole());

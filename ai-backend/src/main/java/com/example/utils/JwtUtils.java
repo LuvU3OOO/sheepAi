@@ -8,6 +8,7 @@ import com.auth0.jwt.exceptions.JWTVerificationException;
 import com.auth0.jwt.interfaces.Claim;
 import com.auth0.jwt.interfaces.DecodedJWT;
 import jakarta.annotation.Resource;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.security.core.GrantedAuthority;
@@ -119,7 +120,6 @@ public class JwtUtils {
             Date expiresAt = verify.getExpiresAt();
             if(new Date().after(expiresAt)) //如果是过期令牌则返回null
             {
-                System.out.println("过期");
                 return null;
             }
             else
